@@ -4,3 +4,6 @@
 
 /.vs/NPC/FileContentIndex
 /NPC.Server/obj
+/.vs/NPC/v17
+/npc.client/obj/Debug
+/NPC.Server/bin/Debug/net8.0
