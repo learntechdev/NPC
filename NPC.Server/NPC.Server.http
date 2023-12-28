@@ -1,0 +1,6 @@
+@NPC.Server_HostAddress = http://localhost:5104
+
+GET {{NPC.Server_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
