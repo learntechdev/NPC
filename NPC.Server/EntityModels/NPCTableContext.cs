@@ -13,10 +13,29 @@ public partial class NPCTableContext : DbContext
     {
     }
 
+    public virtual DbSet<TblRole> TblRoles { get; set; }
+
     public virtual DbSet<TblTest> TblTests { get; set; }
+
+    public virtual DbSet<TblUser> TblUsers { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
+        modelBuilder.Entity<TblRole>(entity =>
+        {
+            entity.ToTable("tbl_Role");
+
+            entity.Property(e => e.CreatedDate)
+                .HasDefaultValueSql("(getdate())")
+                .HasColumnType("datetime");
+            entity.Property(e => e.ModifiedDate)
+                .HasDefaultValueSql("(getdate())")
+                .HasColumnType("datetime");
+            entity.Property(e => e.Name)
+                .HasMaxLength(50)
+                .IsUnicode(false);
+        });
+
         modelBuilder.Entity<TblTest>(entity =>
         {
             entity
@@ -26,6 +45,46 @@ public partial class NPCTableContext : DbContext
             entity.Property(e => e.Name)
                 .HasMaxLength(50)
                 .IsUnicode(false);
+        });
+
+        modelBuilder.Entity<TblUser>(entity =>
+        {
+            entity.ToTable("tbl_User");
+
+            entity.Property(e => e.CompanyId)
+                .HasMaxLength(50)
+                .IsUnicode(false);
+            entity.Property(e => e.CompanyName).HasMaxLength(100);
+            entity.Property(e => e.CreatedDate)
+                .HasDefaultValueSql("(getdate())")
+                .HasColumnType("datetime");
+            entity.Property(e => e.Email).HasMaxLength(200);
+            entity.Property(e => e.FacebookToken)
+                .HasMaxLength(200)
+                .IsUnicode(false);
+            entity.Property(e => e.Gender).HasMaxLength(50);
+            entity.Property(e => e.ImagePath).HasMaxLength(300);
+            entity.Property(e => e.LineToken)
+                .HasMaxLength(200)
+                .IsUnicode(false);
+            entity.Property(e => e.ModifiedDate)
+                .HasDefaultValueSql("(getdate())")
+                .HasColumnType("datetime");
+            entity.Property(e => e.NameEnglish)
+                .HasMaxLength(100)
+                .HasColumnName("Name_English");
+            entity.Property(e => e.NameThai)
+                .HasMaxLength(100)
+                .HasColumnName("Name_Thai");
+            entity.Property(e => e.Password).HasMaxLength(100);
+            entity.Property(e => e.UserName).HasMaxLength(50);
+            entity.Property(e => e.VerificationCode)
+                .HasMaxLength(50)
+                .IsUnicode(false);
+
+            entity.HasOne(d => d.Role).WithMany(p => p.TblUsers)
+                .HasForeignKey(d => d.RoleId)
+                .HasConstraintName("FK_tbl_User_tbl_Role");
         });
 
         OnModelCreatingPartial(modelBuilder);

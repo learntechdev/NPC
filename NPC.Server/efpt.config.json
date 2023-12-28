@@ -16,7 +16,15 @@
    "T4TemplatePath": null,
    "Tables": [
       {
+         "Name": "[dbo].[tbl_Role]",
+         "ObjectType": 0
+      },
+      {
          "Name": "[dbo].[tbl_Test]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[tbl_User]",
          "ObjectType": 0
       }
    ],
