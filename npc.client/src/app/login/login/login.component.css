@@ -1,0 +1,83 @@
+html, body {
+  height: 100% !important;
+  margin: 0 !important;
+}
+
+.flexbox-container {
+  background: #08080852;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  margin: 0;
+  min-height: 98vh;
+  flex-wrap: wrap;
+}
+
+
+
+
+.flexbox-item {
+  max-height: 50%;
+  background: #eff6ff;
+  font-size: 15px;
+}
+
+.fixed {
+  flex: none;
+  max-width: 50%;
+}
+
+.pad-1 {
+  padding: 1em;
+}
+
+.box {
+  width: 100%;
+}
+
+.mb-0 {
+  margin-bottom: 0;
+}
+
+#npc-logo {
+  height: auto;
+  width: 30%;
+}
+
+.formgroup-inline {
+  flex-wrap: nowrap;
+}
+
+.btnlogin {
+  background-color: #0082cc;
+}
+
+.mb-5 {
+  margin-bottom: 5rem;
+}
+
+.btnregister {
+  background-color: #69be47;
+}
+
+.bottom-container {
+  display: flex;
+  background-color: #0082cc;
+}
+
+.bottom-item {
+  color: white;
+  padding: 1%;
+  box-sizing: border-box;
+}
+
+
+.br-20 {
+  border-radius:20px;
+}
+.er-text {
+  color: #ba4b5e;
+  font-size: xx-large;
+  font-weight: 600;
+}
