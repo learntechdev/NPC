@@ -10,3 +10,8 @@
 /.vs/NPC/config
 /.vs/NPC/DesignTimeBuild
 /.vs/ProjectEvaluation
+/npc.client/obj/Release
+/NPC.Server/.config
+/NPC.Server/bin/Release/net8.0
+/NPC.Server/Properties/PublishProfiles
+/NPC.Server/NPC.Server.csproj.user

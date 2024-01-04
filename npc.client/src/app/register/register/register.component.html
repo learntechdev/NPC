@@ -1,0 +1,113 @@
+<div class="flexbox-container">
+  <div class="flexbox-item">
+    <div class="box">
+
+
+      <div class="field" style="margin-bottom:0;">
+        <div class="top-container">
+          <div class="top-item" style="width:20%;">
+            <img id="npc-logo" src="../../../assets/images/npc_logo.jpg" />
+          </div>
+          <div class="top-item text-right" style="width: 80%; line-height:2.5rem;">
+            <span class="er-text">Emergency Respond</span>
+          </div>
+
+        </div>
+      </div>
+
+
+      <div class="field text-center pad-1">
+
+
+        <!--<img id="npc-logo" src="../../../assets/images/npc_logo.jpg" />-->
+
+
+      </div>
+      <!--<div class="field text-center pad-1">
+    <span class="er-text">Emergency Respond</span>
+  </div>-->
+      <div class="field text-center p-2 mb-0">
+        <div class="formgroup-inline">
+
+          <div class="field-radiobutton">
+
+            <label class="ml-2">Identity:</label>
+          </div>
+          <div class="field-radiobutton">
+            <p-radioButton name="identitytype" value="PhoneNumber" [(ngModel)]="selectedIdentityType" inputId="PhoneNumber"></p-radioButton>
+            <label for="PhoneNumber" class="ml-2">Phone Number</label>
+          </div>
+          <div class="field-radiobutton">
+            <p-radioButton name="identitytype" value="Email" [(ngModel)]="selectedIdentityType" inputId="Email"></p-radioButton>
+            <label for="Email" class="ml-2">Email</label>
+          </div>
+
+        </div>
+      </div>
+      <div class="field p-2">
+        <input id="Phone/Email" type="text" class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full" placeholder="Phone/Email" />
+      </div>
+      <div class="field p-2">
+        <input id="UserName" type="text" class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full" placeholder="UserName">
+      </div>
+      <div class="field p-2">
+        <input id="Password" type="password" class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full" placeholder="Password">
+      </div>
+
+      <div class="field p-2">
+        <input id="ConfirmPassword" type="password" class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full" placeholder="ConfirmPassword">
+      </div>
+
+      <div class="field p-2">
+        <input id="NameInThai" type="text" class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full" placeholder="Name In Thai">
+      </div>
+      <div class="field p-2">
+        <input id="NameInEnglish" type="text" class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full" placeholder="Name In English">
+      </div>
+
+      <div class="field p-2">
+        <p-dropdown [options]="genders" [(ngModel)]="selectedGender" optionLabel="Name" [showClear]="true"
+                    placeholder="Select a Gender" [style]="customcss"></p-dropdown>
+      </div>
+      <div class="field p-2">
+        <input id="Phone" type="text" class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full" placeholder="Phone">
+      </div>
+      <div class="field p-2">
+        <input id="Email" type="text" class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full" placeholder="Email">
+      </div>
+
+      <div class="field p-2">
+        <input id="CompanyId" type="text" class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full" placeholder="CompanyId">
+      </div>
+      <div class="field p-2">
+        <input id="CompanyName" type="text" class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full" placeholder="CompanyName">
+      </div>
+
+      <div class="field p-2">
+        <p-dropdown [options]="positions" [(ngModel)]="selectedPosition" optionLabel="Name" [showClear]="true"
+                    placeholder="Select a Position" [style]="customcss"></p-dropdown>
+      </div>
+      <div class="field p-2 button-container">
+        <button pButton pRipple label="Cancel" class="btnregisterform btncancel br-20"></button>
+        <button pButton pRipple label="Register" class="btnregisterform btnregister br-20"></button>
+      </div>
+
+
+      <div class="field" style="margin-bottom:0;">
+        <div class="bottom-container">
+          <div class="bottom-item text-right" style="width:87%;">Login with:</div>
+          <div class="bottom-item"><i class="pi pi-facebook" style="font-size: 1rem"></i></div>
+          <div class="bottom-item" style="float: left; width: 5%;">
+            <img style="width: 100%;" src="../../../assets/images/line-icon.png" />
+
+          </div>
+        </div>
+
+      </div>
+
+
+
+    </div>
+
+  </div>
+</div>

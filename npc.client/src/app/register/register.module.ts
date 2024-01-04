@@ -3,19 +3,21 @@ import { NgModule } from '@angular/core';
 
 import { FormsModule } from '@angular/forms';
 import { ButtonModule } from 'primeng/button';
+import { DropdownModule } from 'primeng/dropdown';
 import { RadioButtonModule } from 'primeng/radiobutton';
-import { LoginRoutingModule } from './login-routing.module';
-import { LoginComponent } from './login/login.component';
+import { RegisterRoutingModule } from './register-routing.module';
+import { RegisterComponent } from './register/register.component';
 @NgModule({
   declarations: [
-    LoginComponent
+    RegisterComponent
   ],
   imports: [
     CommonModule,
-    LoginRoutingModule,
+    RegisterRoutingModule,
     ButtonModule,
     RadioButtonModule,
-    FormsModule
+    FormsModule,
+    DropdownModule
   ]
 })
-export class LoginModule { }
+export class RegisterModule { }
