@@ -21,14 +21,16 @@
 
         <div style="text-align:center">
           <div [innerHtml]='msg' *ngIf="msg" style="color: red;"></div>
-          <div style="position: relative;">
-            <!--<img [src]="url" *ngIf="url" style="height:auto;width:15%;" />-->
+          <div style="margin-bottom:2%;">
+ 
             <p-image [src]="url" *ngIf="url" alt="Image" width="250" height="250" [preview]="true"></p-image>
 
-            <img *ngIf="!url" src="../../../assets/images/dummy_img.png" alt="Image" width="250" height="250" (click)="file.click()" />
-           
-            <i class="pi pi-times" (click)="RemoveImage()" style="font-size: 1rem;position: absolute;top: 70px;right: 32px;" *ngIf="url"></i>
+            <img *ngIf="!url" src="../../../assets/images/dummy_img.png" alt="Image" width="250" height="250"
+                 (click)="file.click()" />
+          </div>
 
+          <div id="remove_img">
+            <i class="pi pi-times-circle" (click)="RemoveImage()" *ngIf="url" style="color:red;"></i>
           </div>
           <p>
             <input type="file" (change)="selectFile($event)" accept="image/*" #file style="display:none;" />

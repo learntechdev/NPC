@@ -112,4 +112,7 @@ html, body {
   margin-bottom: 0;
 }
 
- 
+.fl-left {
+  float: left;
+  width: 100%;
+}

@@ -23,6 +23,7 @@ export class RegisterComponent {
   selectedPosition: Position | undefined;
 
   customcss: { [klass: string]: any } = { "width": "100%","line-height":"1rem"};
+ 
 
 
 
