@@ -7,6 +7,7 @@ import { DropdownModule } from 'primeng/dropdown';
 import { RadioButtonModule } from 'primeng/radiobutton';
 import { RegisterRoutingModule } from './register-routing.module';
 import { RegisterComponent } from './register/register.component';
+import { ImageModule } from 'primeng/image';
 @NgModule({
   declarations: [
     RegisterComponent
@@ -17,7 +18,8 @@ import { RegisterComponent } from './register/register.component';
     ButtonModule,
     RadioButtonModule,
     FormsModule,
-    DropdownModule
+    DropdownModule,
+    ImageModule
   ]
 })
 export class RegisterModule { }
