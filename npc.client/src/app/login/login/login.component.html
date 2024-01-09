@@ -47,16 +47,16 @@
       </div>
       <div class="field pad-1 mb-0">
 
-        <button pButton pRipple label="Login" class="w-full btnlogin br-20"></button>
+        <button pButton pRipple label="Login" class="w-full btnlogin br-20" (click)="GotoHome()"></button>
       </div>
       <div class="field text-center mb-5 pad-1">
-        <p-button label="Reset Password" [link]="true"></p-button>
+        <p-button label="Reset Password" [link]="true" routerLink="/passwordreset"></p-button>
       </div>
  
 
       <div class="field pad-1">
 
-        <button pButton pRipple label="Register" class="w-full btnregister br-20"></button>
+        <button pButton pRipple label="Register" class="w-full btnregister br-20" routerLink="/register"></button>
       </div>
 
       <div class="field" style="margin-bottom:0;">

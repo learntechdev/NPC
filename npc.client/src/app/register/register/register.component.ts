@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 
 interface Gender {
@@ -31,6 +32,8 @@ export class RegisterComponent {
   msg = "";
   selectedImage: any;
 
+  constructor(private router: Router) { }
+
 
   ngOnInit() {
     this.genders = [
@@ -44,7 +47,7 @@ export class RegisterComponent {
   }
 
 
-  selectFile(event: any) { //Angular 11, for stricter type
+  selectFile(event: any) {  
     if (!event.target.files[0] || event.target.files[0].length == 0) {
       this.msg = 'You must select an image';
       return;
@@ -72,7 +75,8 @@ export class RegisterComponent {
     this.selectedImage = "";
   }
   Register() {
-    console.log(this.selectedImage);
+    
+    this.router.navigate(['/login']);
   }
 
 }

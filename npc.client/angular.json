@@ -56,12 +56,13 @@
                   "maximumError": "4kb"
                 }
               ],
-              "outputHashing": "all"
+              "outputHashing": "all",
+              "namedChunks": true
             },
             "development": {
               "optimization": false,
               "extractLicenses": false,
-              "sourceMap": true
+              "sourceMap": true              
             }
           },
           "defaultConfiguration": "production"
@@ -70,7 +71,7 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "npc.client:build:production"
+              "buildTarget": "npc.client:build:production"              
             },
             "development": {
               "buildTarget": "npc.client:build:development"
